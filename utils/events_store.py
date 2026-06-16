@@ -5,8 +5,39 @@ class EventsStore:
                 "event_type": "message",
                 "message_id": "msg_001",
                 "sender_id": "2001",
-                "recipient_id": "1001",
+                "recepient_id": "1001",
                 "text": "test message"
+            }, 
+            "01": {
+                "event_type": "message",
+                "message_id": "msg_002",
+                "sender_id": "2001",
+                "recepient_id": "1001",
+                "text": "Step 1 - not yet blocked"
+            },
+            "02": {
+                "event_type": "block",
+                "sender_id": "2001",
+                "recepient_id": "1001"
+            }, 
+            "03": {
+                "event_type": "message",
+                "message_id": "msg_003",
+                "sender_id": "2001",
+                "recepient_id": "1001",
+                "text": "Step 3 - message from blocked user"
+            },
+            "04": {
+                "event_type": "unblock",
+                "sender_id": "2001",
+                "recepient_id": "1001"
+            },
+            "05": {
+                "event_type": "message",
+                "message_id": "msg_004",
+                "sender_id": "2001",
+                "recepient_id": "1001",
+                "text": "Step 5 - message from unblocked user"
             }
         }
 
