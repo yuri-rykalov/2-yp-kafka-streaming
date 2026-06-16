@@ -7,10 +7,10 @@ admin = KafkaAdmin("localhost:9094")
 
 admin.create_topics(
     topics = [
-        "messages",
-        "filtered_messages",
-        "blocked_users",
-        "blocked_messages"
+        "user_events",       # События: сообщения, блокирвка / разблокировка пользователя
+        "blocked_users",     # Заблокированные пользователи
+        "filtered_messages", # Сообщения, доставленные адресату
+        "blocked_messages"   # Сообщения от заблокированных пользователей
     ],
     partitions=3,
     replicas=2
